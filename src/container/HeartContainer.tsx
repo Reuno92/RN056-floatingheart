@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Animated, Easing, Dimensions } from 'react-native';
 import Heart from '../components/Heart';
 import { globalStyles as styles } from '../style/heart.style';
@@ -9,9 +9,9 @@ const negativeEndY = animationEndY * -1
 
 const HeartContainer = (props: any): JSX.Element => {
 
-    const [movement] = useState(new Animated.Value(0));
-    const [opacity] = useState(new Animated.Value(1));
-    const [scale] = useState(new Animated.Value(0.5));
+    const movement = useRef(new Animated.Value(0)).current;
+    const opacity = useRef(new Animated.Value(1)).current;
+    const scale = useRef(new Animated.Value(0.5)).current;
   
     const { onComplete } = props;
   
