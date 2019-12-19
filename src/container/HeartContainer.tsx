@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Animated, Easing, Dimensions } from 'react-native';
 import Heart from '../components/Heart';
 import { globalStyles as styles } from '../style/heart.style';
